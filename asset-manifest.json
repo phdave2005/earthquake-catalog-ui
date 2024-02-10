@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/earthquake-catalog-ui/static/css/main.5bb2f684.css",
-    "main.js": "/earthquake-catalog-ui/static/js/main.d31e8bea.js",
+    "main.js": "/earthquake-catalog-ui/static/js/main.cd351970.js",
     "static/js/984.eed2f21a.chunk.js": "/earthquake-catalog-ui/static/js/984.eed2f21a.chunk.js",
     "static/js/787.d66c046d.chunk.js": "/earthquake-catalog-ui/static/js/787.d66c046d.chunk.js",
     "static/media/dvp_photo.jpg": "/earthquake-catalog-ui/static/media/dvp_photo.4776192146753282167c.jpg",
     "static/media/processing.svg": "/earthquake-catalog-ui/static/media/processing.98bb64fc57f579f6a3a0c8ac451ce5b0.svg",
     "index.html": "/earthquake-catalog-ui/index.html",
     "main.5bb2f684.css.map": "/earthquake-catalog-ui/static/css/main.5bb2f684.css.map",
-    "main.d31e8bea.js.map": "/earthquake-catalog-ui/static/js/main.d31e8bea.js.map",
+    "main.cd351970.js.map": "/earthquake-catalog-ui/static/js/main.cd351970.js.map",
     "984.eed2f21a.chunk.js.map": "/earthquake-catalog-ui/static/js/984.eed2f21a.chunk.js.map",
     "787.d66c046d.chunk.js.map": "/earthquake-catalog-ui/static/js/787.d66c046d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5bb2f684.css",
-    "static/js/main.d31e8bea.js"
+    "static/js/main.cd351970.js"
   ]
 }
