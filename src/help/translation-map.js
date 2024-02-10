@@ -13,11 +13,15 @@ export const TEXT_MAP = {
             },
             {
                 id: 2,
-                text: 'Search hits will be automatically downloaded as a .json file.'
+                text: 'Search hits will be optionally downloaded as a .json file; change this in Settings.'
             },
             {
                 id: 3,
-                text: 'Available languages (as of December 2023) are English, Spanish, French, and Italian. This can be changed in Settings.'
+                text: 'Clear search results / reset form by clicking the "Reset" button.'
+            },
+            {
+                id: 4,
+                text: 'Available languages (as of February 2024) are English, Spanish, French, and Italian. This can be changed in Settings.'
             }
         ]
     },
@@ -35,11 +39,15 @@ export const TEXT_MAP = {
             },
             {
                 id: 2,
-                text: 'Los resultados de búsqueda se descargarán automáticamente como un archivo .json.'
+                text: 'Los resultados de búsqueda se descargarán opcionalmente como un archivo .json; cambie esto en Configuración.'
             },
             {
                 id: 3,
-                text: 'Los idiomas disponsibles (a diciembre de 2023) son inglés, español, francés, e italiano. Esto se peude cambiar en Configuración.'
+                text: 'Los resultados de búsqueda se descargarán opcionalmente como un archivo .json; cambie esto en Configuración.'
+            },
+            {
+                id: 4,
+                text: 'Los idiomas disponsibles (a Febrero de 2024) son inglés, español, francés, e italiano. Esto se peude cambiar en Configuración.'
             }
         ]
     },
@@ -57,11 +65,15 @@ export const TEXT_MAP = {
             },
             {
                 id: 2,
-                text: 'Les résultats de recherche seront automatiquement téléchargés sous forme de fichier .json.'
+                text: 'Les résultats de recherche seront éventuellement téléchargés sous forme de fichier .json ; changez cela dans Paramètres.'
             },
             {
                 id: 3,
-                text: 'Les langues disponsibles (à partir décembre 2023) sont l\'anglais, l\'espagnol, le français et l\'italian. Cela peut être modifié dans les Paramètres.'
+                text: 'Les résultats de recherche seront éventuellement téléchargés sous forme de fichier .json ; changez cela dans Paramètres.'
+            },
+            {
+                id: 4,
+                text: 'Les langues disponsibles (à partir Février 2024) sont l\'anglais, l\'espagnol, le français et l\'italian. Cela peut être modifié dans les Paramètres.'
             }
         ]
     },
@@ -79,11 +91,15 @@ export const TEXT_MAP = {
             },
             {
                 id: 2,
-                text: 'I risultati della ricerca verranno scaricati automaticamente come file .json.'
+                text: 'I risultati della ricerca verranno facoltativamente scaricati come file .json; modificalo in Impostazioni.'
             },
             {
                 id: 3,
-                text: 'Le lingue disponibili (a dicembre 2023) sono inglese, spagnolo, francese e italiano. Questo può essere modificato in Impostazioni.'
+                text: 'Los resultados de búsqueda se descargarán opcionalmente como un archivo .json; cambie esto en Configuración.'
+            },
+            {
+                id: 4,
+                text: 'Le lingue disponibili (a Febbraio 2024) sono inglese, spagnolo, francese e italiano. Questo può essere modificato in Impostazioni.'
             }
         ]
     }

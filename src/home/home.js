@@ -329,12 +329,14 @@ class Home extends Component {
 
     renderInfo(data) {
         const properties = data.properties,
-            alertColor = properties.alert || 'gray',
-            dateString = new Date(properties.time).toString();
+            alertColor = properties.alert || 'gray';
+        let dateString = new Date(properties.time).toString(), modifiedDatestring;
+        dateString = dateString.slice(0, dateString.lastIndexOf("(")).trim();
+        modifiedDatestring = dateString.slice(dateString.indexOf(" ")).trim();
         document.getElementById("result-title").innerHTML = properties.title;
         document.getElementById("result-title-link").href = properties.url + "/executive";
         document.getElementById("result-alert-status").style.color = alertColor;
-        document.getElementById("result-date").innerHTML = dateString.slice(0, dateString.lastIndexOf("(")).trim();
+        document.getElementById("result-date").innerHTML = modifiedDatestring;
         document.getElementById("result-event-type").innerHTML = this.eventTypes[data.properties.type];
     }
 
