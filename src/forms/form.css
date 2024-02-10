@@ -1,0 +1,105 @@
+.field[disabled] {
+    cursor: not-allowed
+}
+
+.flex-field-half-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto 32px;
+    max-width: 800px
+}
+
+h2.form-heading {
+    text-align: center;
+    font-size: 30px
+}
+
+@media (max-width: 600px) {
+    h2.form-heading {
+        font-size: 24px
+    }
+}
+
+:focus {
+    outline: 3px solid #addfff
+}
+
+.flex-field {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto 32px;
+    max-width: 800px;
+    &.invalid {
+        & input, & select {
+            border: solid red
+        }
+        & label {
+            color: red
+        }
+    }
+    &.half {
+        justify-content: center;
+        width: 60%;
+        margin: 0;
+        max-width: 350px;
+        &:has([type=checkbox]) {
+            align-items: center
+        }
+        & input {
+            margin-bottom: 4px;
+            padding: 8px;
+            box-sizing: border-box;
+            font-size: 16px;
+            width: 100%;
+            &[type=checkbox] {
+                transform: scale(1.5);
+                margin-right: 4px;
+                width: max-content
+            }
+        }
+    }
+    & label {
+        margin: auto
+    }
+    & > input, & > select {
+        width: 100%;
+        margin-bottom: 4px;
+        padding: 8px;
+        box-sizing: border-box;
+        font-size: 16px;
+        & optgroup {
+            font-style: normal
+        }
+    }
+    & > select {
+        background: rgb(128 128 128 / 0.06);
+        & :checked:not(value="") {
+            color: green
+        }
+    }
+}
+
+.flex-field-horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+@media (max-width: 600px) {
+    .flex-field-half-wrapper {
+        flex-direction: column;
+        width: 90%;
+        margin-bottom: 0
+    }
+    .flex-field.half {
+        width: 100%;
+        max-width: unset;
+        margin-bottom: 32px
+    }
+}

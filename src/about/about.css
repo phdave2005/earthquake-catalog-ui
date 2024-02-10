@@ -1,0 +1,11 @@
+main#about {
+	background: #fff;
+	padding: 4px
+}
+main#about p {
+	padding-top: 32px;
+	color: #000!important;
+	text-align: justify;
+	max-width: 1000px;
+	margin: auto
+}
