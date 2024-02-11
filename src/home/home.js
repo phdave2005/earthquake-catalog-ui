@@ -92,6 +92,13 @@ class Home extends Component {
                         filterData = elements[i].getAttribute("data-filter") || null;
                         type = elements[i].type;
                         if (val) {
+                            if (elements[i].type === 'checkbox') {
+                                if (elements[i].checked) {
+                                    val = 1;
+                                } else {
+                                    continue;
+                                }
+                            }
                             searchData[category][ID] = {
                                 filter: filterData,
                                 nodeName: elements[i].nodeName,
@@ -195,9 +202,11 @@ class Home extends Component {
             }
             if (Object.keys(stateObj).length) {
                 this.setState(stateObj);
-                const indexedData = this.apiData[this.state.chartIndex];
-                this.renderInfo(indexedData);
-                this.renderChart(indexedData);
+                setTimeout(() => {
+                    const indexedData = this.apiData[this.state.chartIndex];
+                    this.renderInfo(indexedData);
+                    this.renderChart(indexedData);
+                }, 250);
             }
         }
     }
@@ -209,18 +218,19 @@ class Home extends Component {
 
     fetchData(searchData) {
         const payload = searchData.payload;
+        const filters = searchData.filters;
         if (!window.navigator.onLine && this.isLocalhost()) {
             import(`../constants/mock-response.js`)
             .then((response) => {
                 const mockResponseData = response.MOCK_RESPONSE.features;
-                this.processResponse(mockResponseData);
+                this.processResponse(mockResponseData, filters);
             });
         } else {
             const results = this.apiPath + '?format=geojson&' + this.constructQueryString(payload) + '&limit=' + this.getQueryLimit();
             axios.get(this.corsDomain + '/?' + encodeURIComponent(results))
             .then((response) => {
                 if (response?.data?.features?.length) {
-                    this.processResponse(response.data.features);
+                    this.processResponse(response.data.features, filters);
                 } else {
                     this.setState(state => (state.forms.validation = {
                         error: {
@@ -249,16 +259,50 @@ class Home extends Component {
         }
     }
 
-    processResponse(data) {
-        this.setState({
-            quakes: {
-                cl: 'MT64'
+    processResponse(data, filters) {
+        let i, j, filteredData = [], allPass,
+            filterMap = {
+                tsunami: (d, v) => {
+                    return d.properties.tsunami === 1;
+                },
+                magtype: (d, v) => {
+                    return d.properties.magType.toLowerCase() === v;
+                }
+            };
+        for(i in data) {
+            allPass = true;
+            for(j in filters) {
+                if (!filterMap[filters[j].filter](data[i], filters[j].value)) {
+                    allPass = false;
+                    break;
+                }
             }
-        });
-        if (window.localStorage?.getItem("download") === '1') {
-            this.downloadData(data);
+            if (allPass) {
+                filteredData.push(data[i]);
+            }
+        }
+        if (filteredData.length) {
+            this.setState({
+                quakes: {
+                    cl: 'MT64'
+                }
+            });
+            if (window.localStorage?.getItem("download") === '1') {
+                this.downloadData(filteredData);
+            } else {
+                this.renderWithTimeout(filteredData);
+            }
         } else {
-            this.renderWithTimeout(data);
+            this.setState(state => (state.forms.validation = {
+                error: {
+                    cl: 'invalid',
+                    text: this.textUsed.validation.error.noData
+                },
+                processing: {
+                    cl: 'DN',
+                    text: null
+                }
+            }, state));
         }
     }
 

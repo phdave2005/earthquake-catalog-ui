@@ -31,7 +31,7 @@ function FiltersForm(props) {
                     <LabelElement labelFor={'max-search-results'} text={textUsed.fields.maxSearchResults.label} tooltip={false} />
                 </div>
                 <div className="flex-field half">
-                    <select id="magtype" className="field" data-search-category="filters">
+                    <select id="magtype" className="field" data-search-category="filters" data-filter="magtype">
                         <option value="">{textUsed.selectDefault}</option>
                             {createOptions(MAGNITUDE_TYPES[props.language], 'mt')}
                     </select>
