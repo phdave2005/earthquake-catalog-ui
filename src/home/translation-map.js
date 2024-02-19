@@ -10,7 +10,7 @@ export const TEXT = {
             },
             title: 'بيانات الشدة',
             xLabels: [
-                'Magnitude',
+                'ضخامة',
                 'MMI',
                 'CDI'
             ]
@@ -72,7 +72,7 @@ export const TEXT = {
             },
             title: 'Intensitätsdaten',
             xLabels: [
-                'Magnitude',
+                'Größe',
                 'MMI',
                 'CDI'
             ]
@@ -320,7 +320,7 @@ export const TEXT = {
             },
             title: 'तीव्रता डेटा',
             xLabels: [
-                'Magnitude',
+                'परिमाण',
                 'MMI',
                 'CDI'
             ]
@@ -444,7 +444,7 @@ export const TEXT = {
             },
             title: '強度データ',
             xLabels: [
-                'Magnitude',
+                'マグニチュード',
                 'MMI',
                 'CDI'
             ]
@@ -506,7 +506,7 @@ export const TEXT = {
             },
             title: '강도 데이터',
             xLabels: [
-                'Magnitude',
+                '크기',
                 'MMI',
                 'CDI'
             ]
@@ -568,7 +568,7 @@ export const TEXT = {
             },
             title: 'Данные об интенсивности',
             xLabels: [
-                'Magnitude',
+                'Величина',
                 'MMI',
                 'CDI'
             ]
@@ -630,7 +630,7 @@ export const TEXT = {
             },
             title: '強度數據',
             xLabels: [
-                'Magnitude',
+                '規模',
                 'MMI',
                 'CDI'
             ]
