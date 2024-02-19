@@ -11,21 +11,49 @@ import SettingsToggle from './elements/settings/settings-toggle.js'
 
 const App = () => {
     const textMap = {
+        ar: {
+            about: 'عن الدكتور بارتيكا',
+            aboutEarthquake: 'حول برنامج مخاطر الزلازل'
+        },
+        de: {
+            about: 'Über Dr. Partyka',
+            aboutEarthquake: 'Über das Erdbebengefahrenprogramm'
+        },
         en: {
-            about: 'About DVP',
+            about: 'About Dr. Partyka',
             aboutEarthquake: 'About Earthquake Catalog'
         },
         es: {
-            about: 'Acerca de DVP',
-            aboutEarthquake: 'Acerca del catálogo de terremotos'
+            about: 'Acerca del Dr. Partyka',
+            aboutEarthquake: 'Acerca del programa de riesgos sísmicos'
         },
         fr: {
-            about: 'À propos DVP',
-            aboutEarthquake: 'À propos du catalogue des tremblements de terre'
+            about: 'À propos du Dr Partyka',
+            aboutEarthquake: 'À propos du programme sur les risques sismiques'
+        },
+        hi: {
+            about: 'डॉ. पार्टीका के बारे में',
+            aboutEarthquake: 'भूकंप खतरा कार्यक्रम के बारे में'
         },
         it: {
-            about: 'Di DVP',
-            aboutEarthquake: 'Informazioni sul catalogo dei terremoti'
+            about: 'A proposito del dottor Partyka',
+            aboutEarthquake: 'Informazioni sul programma sui rischi legati ai terremoti'
+        },
+        ja: {
+            about: 'パーティカ博士について',
+            aboutEarthquake: '地震防災プログラムについて'
+        },
+        ko: {
+            about: '닥터파티카 소개',
+            aboutEarthquake: '지진 위험 프로그램 정보'
+        },
+        ru: {
+            about: 'О докторе Партике',
+            aboutEarthquake: 'О программе по предотвращению землетрясений'
+        },
+        zh: {
+            about: '關於帕蒂卡博士',
+            aboutEarthquake: '關於地震災害計劃'
         }
     };
     const language =  window?.localStorage?.getItem("language-used") || 'en';

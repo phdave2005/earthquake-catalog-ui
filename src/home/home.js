@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './home.css'
 import MainForm from '../forms/main/main-form.js'
 import FiltersForm from '../forms/filters/filters-form.js'
+import EVENT_TYPES from '../constants/event-types.js'
 import processing from './processing.svg'
 import TRANSLATION_MAPS from './translation-map.js'
 
@@ -17,7 +18,7 @@ class Home extends Component {
         this.corsDomain = 'https://corsproxy.io';
         this.language = window?.localStorage?.getItem("language-used") || 'en';
         this.textUsed = TRANSLATION_MAPS.TEXT[this.language];
-        this.eventTypes = TRANSLATION_MAPS.EVENT_TYPES[this.language];
+        this.eventTypes = this.mapEventTypes();
         this.apiData = [];
         this.state = {
             apiDataLength: 0,
@@ -67,6 +68,16 @@ class Home extends Component {
     isProcessing = () => {
         const el = document.getElementById("processing-container");
         return !!el && !el.classList.contains("DN");
+    }
+
+    mapEventTypes() {
+        const rawEventTypes = EVENT_TYPES[this.language];
+        const eventTypes = {};
+        const generateMap = (map, et) => {
+            map[et.value.replace(/-/g, " ")] = et.label;
+            return map;
+        };
+        return rawEventTypes.reduce(generateMap, eventTypes);
     }
 
     processFormSubmission = (e) => {
@@ -487,10 +498,10 @@ class Home extends Component {
                 }
             }
         }
-        if (!hasError) {
-            document.getElementById("main-grid-view").scrollTop = 0;
-        } else {
+        if (hasError) {
             document.querySelectorAll(".flex-field.invalid")[0].parentElement.parentElement.scrollIntoView();
+        } else {
+            document.getElementById("main-grid-view").scrollTop = 0;
         }
         return hasError;
     }

@@ -27,13 +27,13 @@ function FiltersForm(props) {
         <section id="filters-section" className={props.class} data-testid="filters">
             <div className="flex-field-half-wrapper MT32">
                 <div className="flex-field half">
-                    <input id="max-search-results" placeholder={textUsed.fields.maxSearchResults.placeholder} className="field" type="number" data-validations="positiveInteger" data-search-category="filters" onKeyUp={handleNumberChange} />
+                    <input id="max-search-results" placeholder={textUsed.fields.maxSearchResults.placeholder} className="field" type="number" step="any" min="1" data-validations="positiveInteger" data-search-category="filters" onKeyUp={handleNumberChange} />
                     <LabelElement labelFor={'max-search-results'} text={textUsed.fields.maxSearchResults.label} tooltip={false} />
                 </div>
                 <div className="flex-field half">
                     <select id="magtype" className="field" data-search-category="filters" data-filter="magtype">
                         <option value="">{textUsed.selectDefault}</option>
-                            {createOptions(MAGNITUDE_TYPES[props.language], 'mt')}
+                            {createOptions(MAGNITUDE_TYPES, 'mt')}
                     </select>
                     <LabelElement labelFor={'magtype'} text={textUsed.fields.magType.label} tooltip={false} />
                 </div>

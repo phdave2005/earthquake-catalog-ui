@@ -53,31 +53,31 @@ function MainForm(props) {
 				<legend>{textUsed.legend.intensity}</legend>
 				<div className="flex-field-half-wrapper MT32">
 					<div className="flex-field half">
-						<input id="minmagnitude" className="field" step="any" type="number" data-validations="positiveNumber,maximumValue,minCannotExceedMax" data-maximum-value="10" data-search-category="payload" onKeyUp={handleNumberChange} />
+						<input id="minmagnitude" className="field" step="any" min="0" type="number" data-validations="positiveNumber,maximumValue,minCannotExceedMax" data-maximum-value="10" data-search-category="payload" onKeyUp={handleNumberChange} />
 						<LabelElement labelFor={'minmagnitude'} text={textUsed.labels.minMagnitude} tooltip={false} />
 					</div>
 					<div className="flex-field half">
-						<input id="maxmagnitude" className="field" step="any" type="number" data-validations="positiveNumber,maximumValue" data-maximum-value="10" data-search-category="payload" onKeyUp={handleNumberChange} />
+						<input id="maxmagnitude" className="field" step="any" min="0" type="number" data-validations="positiveNumber,maximumValue" data-maximum-value="10" data-search-category="payload" onKeyUp={handleNumberChange} />
 						<LabelElement labelFor={'maxmagnitude'} text={textUsed.labels.maxMagnitude} tooltip={false} />
 					</div>
 				</div>
 				<div className="flex-field-half-wrapper MT32">
 					<div className="flex-field half">
-						<input id="minmmi" className="field" step="any" type="number" data-validations="positiveNumber,maximumValue,minCannotExceedMax" data-maximum-value="12" data-search-category="payload" onKeyUp={handleNumberChange} />
+						<input id="minmmi" className="field" step="any" min="0" type="number" data-validations="positiveNumber,maximumValue,minCannotExceedMax" data-maximum-value="12" data-search-category="payload" onKeyUp={handleNumberChange} />
 						<LabelElement labelFor={'minmmi'} text={textUsed.labels.minMmi} tooltip={false} />
 					</div>
 					<div className="flex-field half">
-						<input id="maxmmi" className="field" step="any" type="number" data-validations="positiveNumber,maximumValue" data-maximum-value="12" data-search-category="payload" onKeyUp={handleNumberChange} />
+						<input id="maxmmi" className="field" step="any" min="0" type="number" data-validations="positiveNumber,maximumValue" data-maximum-value="12" data-search-category="payload" onKeyUp={handleNumberChange} />
 						<LabelElement labelFor={'maxmmi'} text={textUsed.labels.maxMmi} tooltip={false} />
 					</div>
 				</div>
 				<div className="flex-field-half-wrapper MT32">
 					<div className="flex-field half">
-						<input id="mincdi" className="field" step="any" type="number" data-validations="positiveNumber,maximumValue,minCannotExceedMax" data-maximum-value="12" data-search-category="payload" onKeyUp={handleNumberChange} />
+						<input id="mincdi" className="field" step="any" min="0"type="number" data-validations="positiveNumber,maximumValue,minCannotExceedMax" data-maximum-value="12" data-search-category="payload" onKeyUp={handleNumberChange} />
 						<LabelElement labelFor={'mincdi'} text={textUsed.labels.minCdi} tooltip={false} />
 					</div>
 					<div className="flex-field half">
-						<input id="maxcdi" className="field" step="any" type="number" data-validations="positiveNumber,maximumValue" data-maximum-value="12" data-search-category="payload" onKeyUp={handleNumberChange} />
+						<input id="maxcdi" className="field" step="any" min="0" type="number" data-validations="positiveNumber,maximumValue" data-maximum-value="12" data-search-category="payload" onKeyUp={handleNumberChange} />
 						<LabelElement labelFor={'maxcdi'} text={textUsed.labels.maxCdi} tooltip={false} />
 					</div>
 				</div>

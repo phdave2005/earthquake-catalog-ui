@@ -1,4 +1,38 @@
 export const TEXT_MAP = {
+    ar: {
+        fields: {
+            hadTsunami: {
+                label: 'كان هناك تسونامي',
+                placeholder: null
+            },
+            magType: {
+                label: 'نوع الحجم',
+                placeholder: null
+            },
+            maxSearchResults: {
+                label: 'حدود نتائج البحث',
+                placeholder: 'تعيين حد النتيجة'
+            }
+        },
+        selectDefault: 'يختار'
+    },
+    de: {
+        fields: {
+            hadTsunami: {
+                label: 'Hatte einen Tsunami',
+                placeholder: null
+            },
+            magType: {
+                label: 'Größentyp',
+                placeholder: null
+            },
+            maxSearchResults: {
+                label: 'Beschränkung der Suchergebnisse',
+                placeholder: 'Legen Sie das Ergebnislimit fest'
+            }
+        },
+        selectDefault: 'Wählen'
+    },
     en: {
         fields: {
             hadTsunami: {
@@ -50,6 +84,23 @@ export const TEXT_MAP = {
         },
         selectDefault: 'Sélectionner'
     },
+    hi: {
+        fields: {
+            hadTsunami: {
+                label: 'सुनामी थी',
+                placeholder: null
+            },
+            magType: {
+                label: 'परिमाण प्रकार',
+                placeholder: null
+            },
+            maxSearchResults: {
+                label: 'खोज परिणाम सीमा',
+                placeholder: 'परिणाम सीमा निर्धारित करें'
+            }
+        },
+        selectDefault: 'चुनना'
+    },
     it: {
         fields: {
             hadTsunami: {
@@ -66,6 +117,74 @@ export const TEXT_MAP = {
             }
         },
         selectDefault: 'Selezionare'
+    },
+    ja: {
+        fields: {
+            hadTsunami: {
+                label: '津波があった',
+                placeholder: null
+            },
+            magType: {
+                label: 'マグニチュードタイプ',
+                placeholder: null
+            },
+            maxSearchResults: {
+                label: '検索結果の制限',
+                placeholder: '結果の制限を設定する'
+            }
+        },
+        selectDefault: '選択する'
+    },
+    ko: {
+        fields: {
+            hadTsunami: {
+                label: '쓰나미가 발생했습니다',
+                placeholder: null
+            },
+            magType: {
+                label: '크기 유형',
+                placeholder: null
+            },
+            maxSearchResults: {
+                label: '검색결과 제한',
+                placeholder: '결과 제한 설정'
+            }
+        },
+        selectDefault: '선택하다'
+    },
+    ru: {
+        fields: {
+            hadTsunami: {
+                label: 'Было цунами',
+                placeholder: null
+            },
+            magType: {
+                label: 'Тип величины',
+                placeholder: null
+            },
+            maxSearchResults: {
+                label: 'Ограничение результатов поиска',
+                placeholder: 'Установить предел результатов'
+            }
+        },
+        selectDefault: 'Выбирать'
+    },
+    zh: {
+        fields: {
+            hadTsunami: {
+                label: '發生海嘯',
+                placeholder: null
+            },
+            magType: {
+                label: '幅度類型',
+                placeholder: null
+            },
+            maxSearchResults: {
+                label: '搜尋結果限制',
+                placeholder: '設定結果限制'
+            }
+        },
+        selectDefault: '選擇'
     }
 };
 

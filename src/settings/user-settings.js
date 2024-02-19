@@ -111,7 +111,7 @@ class Settings extends Component {
                     }
                     elem = document.getElementById("about-earthquake");
                     if (!!elem) {
-                        elem.innerHTML = LANGUAGE_INFO.TEXT_MAP[this.languageUsed].about.cod;
+                        elem.innerHTML = LANGUAGE_INFO.TEXT_MAP[this.languageUsed].about.ehp;
                     }
                 }
             }
