@@ -251,7 +251,7 @@ export const TEXT_MAP = {
             depth: 'गहराई (किलोमीटर)',
             felt: 'महसूस की गई घटना (रिपोर्ट करने वाले लोगों की संख्या)',
             gap: 'अज़ीमुथल गैप',
-            intensity: '強度関連',
+            intensity: 'तीव्रता संबंधी',
             location: 'जगह',
             metadata: 'मेटाडाटा',
             significance: 'महत्व'
