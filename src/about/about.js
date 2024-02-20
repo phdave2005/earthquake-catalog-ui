@@ -21,7 +21,7 @@ class About extends Component {
 		return ( 
 			<main id="about">
 				<section className="main-wrapper">
-					<h1>{this.state.text.heading}</h1>
+					<h2>{this.state.text.heading}</h2>
 					<div>
 						<img src={dvp} alt="DVP" />
 						<p dangerouslySetInnerHTML={{__html: '&emsp;' + this.state.text.content}}></p>
