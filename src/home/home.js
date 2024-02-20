@@ -374,7 +374,7 @@ class Home extends Component {
                 cl: ''
             },
             quakes: {
-                cl: 'MT16'
+                cl: ''
             }
         });
         const indexedData = this.apiData[this.state.chartIndex];
@@ -630,7 +630,7 @@ class Home extends Component {
                     </div>
                     <div id="main-grid-view">
                         <p className={"dialog " + this.state.forms.validation.error.cl} data-identifier="info">{this.state.forms.validation.error.text}</p>
-                        <div className={this.state.chartControls.cl + ' flexrow-even FS24 MB-8'}>
+                        <div className={this.state.chartControls.cl + ' flexrow-even FS24 bgg'}>
                             <span>
                                 <FontAwesomeIcon icon={faFastBackward} onClick={this.resultGo} data-tooltip-id={'fast-backward'} data-tooltip-content={this.textUsed.chart.controls.fastBackward} data-go-type="first" />
                             </span>
@@ -647,7 +647,7 @@ class Home extends Component {
                             <Tooltip id={'fast-forward'} />
                         </div>
                         <div id="results-container" className={this.state.quakes.cl}>
-                            <div id="info-container" className={this.state.info.cl}>
+                            <div id="info-container" className={this.state.info.cl + ' bgg'}>
                                 <h2><FontAwesomeIcon id="result-alert-status" icon={faCircle}  data-tooltip-id={'alert-status-circle'} data-tooltip-content={this.textUsed.chart.alert}/> <a id="result-title-link" href="" target="_blank"><span id="result-title"></span> <FontAwesomeIcon icon={faArrowUpRightFromSquare} /></a></h2>
                                 <Tooltip id={'alert-status-circle'} />
                                 <ul>

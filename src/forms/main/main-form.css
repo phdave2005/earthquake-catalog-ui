@@ -8,6 +8,8 @@ fieldset {
     background: whitesmoke;
     padding: 0;
     margin: 0!important;
+    border-left: none;
+    border-right: none;
     & legend {
         text-align: left;
         background: black;

@@ -94,6 +94,10 @@ main {
 	justify-content: center
 }
 
+.bgg {
+	background: #efefef;
+}
+
 .flexrow-even {
 	display: flex;
 	justify-content: space-evenly;
@@ -113,7 +117,6 @@ main {
 }
 
 #info-container {
-	background: #efefef;
 	height: max-content;
 	max-height: 50%
 }
